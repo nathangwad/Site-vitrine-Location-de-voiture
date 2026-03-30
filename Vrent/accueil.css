@@ -1,0 +1,745 @@
+@font-face {
+    font-family: 'Nova Script';
+    src: url('../../../Downloads/Nova_Script/NovaScript-Regular.ttf') format('truetype');    
+}
+@font-face {
+    font-family: 'Markazi Text';
+    src: url('./fonts/MarkaziText-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Niconne';
+    src: url(./fonts/Niconne-Regular.ttf) format('truetype');
+}
+
+/* Barre de navigation */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0); 
+    z-index: 10000;
+    border-bottom: #ffffff 0.1vw solid;
+    
+}
+
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 6vw;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li a {
+    font-family: 'Niconne';
+    font-size: 2.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5vh;
+    width: 100%;
+    height: 0.2vh;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.svglogo {
+    width: 7vw;
+    height: auto;
+    position: absolute;
+    left: 5%;
+}
+
+.hero {
+    height: 100vh;
+    background: url('./image/accueli2l.jpg') center/cover no-repeat;
+    display: flex;
+    color: white;
+}
+.section {
+    margin-bottom: 5%; /* Augmente l'espacement entre les différentes sections */
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    margin-bottom: 10vh; /* Ajoute de l'espace sous la section hero */
+}
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2vw;
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+}
+
+
+.feature {
+    width: 20vw;
+    border: 0.2vw solid #ccc;
+    padding: 4vw;
+    border-radius: 0.5vw;
+    box-shadow: 0.2vw 0.2vw 1vw rgba(0, 0, 0, 0.1);
+    margin-bottom: 10vw;
+   
+}
+
+.feature h3 {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 1vh;
+    font-family: 'Markazi Text';
+}
+
+.feature p {
+    font-size: 1.2vw;
+    color: #000000;
+    font-family: 'Markazi Text';
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    margin-bottom: 4vh;
+    font-family: 'Markazi Text';
+    padding-top: 2vh;
+    
+}
+
+
+.numbers div {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #333;
+    padding-top: 5vh;
+}
+
+.numbers div::after {
+    content: "";
+    display: block;
+    width: 25vw;
+    height: 0.01vw;
+    background: #333;
+    margin-left: 0;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: left;
+    font-size: 4vw;
+    padding-top: 25vh;
+    font-family: 'Markazi Text';
+    padding-left: 5vw;
+}
+
+.vehicle-card {
+    display: flex;
+    background-color: white;
+    box-shadow: 0vw 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: #333 0.1vw solid;
+    margin-top: 8vh;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin-top: 10vh; /* Ajouter plus d'espace au-dessus des cartes de véhicules */
+    margin-bottom: 10vh; 
+}
+
+.vehicle-image {
+    width: 100%;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: auto;
+}
+
+.vehicle-info {
+    width: 50%;
+   
+    box-sizing: border-box;
+    padding: 6vw;
+}
+
+.vehicle-info h2 {
+    font-size: 2.5vw;
+    margin-top: 2vh;
+}
+
+.vehicle-info p {
+    font-size: 1vw;
+    color: #433e3e;
+    margin-bottom: 1vh;
+}
+
+.price {
+    font-size: 4vw;
+    color: #ff5733;
+    margin-top: 1vh;
+    padding: 1vh;
+    border-radius: 0.5vw;
+}
+
+/* À continuer pour le reste du fichier si cette structure te convient */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+.vidéo {
+    display: flex;
+    flex-direction: row; /* Aligne en ligne */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permet d'éviter le débordement */
+    width: 100%;
+    padding: 15vh 2vw;
+    box-sizing: border-box;
+    gap: 4vw;
+    overflow-x: hidden;
+}
+
+.text-section {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 10vh 2vw;
+    box-sizing: border-box;
+}
+
+.text-section h1 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-bottom: 2vh;
+    line-height: 1.2;
+}
+
+.text-section p {
+    font-size: 1.2vw;
+    color: #000;
+    line-height: 1.5;
+}
+
+.image-section {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+
+.image-section video {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.vehicle-card {
+    display: flex;
+    flex-direction: row; /* Pour garder l'image à gauche et le texte à droite */
+    background-color: white;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: 0.1vw solid #333;
+    width: 90%;
+    margin: 5vh auto;
+    box-sizing: border-box;
+}
+
+.vehicle-image {
+    width: 50%;
+}
+
+.vehicle-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.vehicle-info {
+    width: 50%;
+    padding: 5vw;
+    box-sizing: border-box;
+}
+
+.vehicle-info h2 {
+    font-size: 2vw;
+    margin-top: 2vh;
+}
+
+.vehicle-info p {
+    font-size: 1vw;
+    color: #433e3e;
+    margin-bottom: 1vh;
+}
+
+.contact-section {
+    text-align: center;
+    padding: 10% 2%; /* Conversion des 200px en % */
+    background-color: #ffffff;
+    
+    margin-top: 4%;
+    padding: 12% 2%; /* Ajouter un peu plus d'espace vertical pour la section contact */
+    margin-bottom: 6%; 
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.contact-section p {
+    font-size: 1.2em;
+    margin-bottom: 4%;
+    color: #333;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6%;
+}
+
+.contact-item {
+    background-color: #fff;
+    padding: 1%;
+    border-radius: 0.1%;
+    width: 20%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 6%;
+}
+
+.contact-item h3 {
+    margin: 1% 0;
+    font-size: 1.5em;
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    color: #000000;
+}
+
+.contact-item z {
+    font-size: 1.1em;
+    color: #ff0000;
+}
+
+.contact-item a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-item .icon-phone,
+.contact-item .icon-chat,
+.contact-item .icon-mail {
+    font-size: 4vw; /* Utilisation du `vw` pour s'adapter à la largeur de la fenêtre */
+    color: #007BFF;
+    margin-bottom: 1.5%;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    padding: 0.6%;
+
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%; /* Ajusté pour s'adapter à 100% + padding */
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 6%
+}
+
+.footer .column {
+    text-align: left;
+    margin: 4%;
+}
+
+.footer a {
+    display: block;
+    color: gray;
+    text-decoration: none;
+    margin: 1% 0;
+}
+
+.section {
+    border: 1px solid #ccc; /* Lighter border for a softer look */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 1.9%; /* Conversion de 30px en % */
+    overflow: hidden;
+    box-shadow: 0 0.2% 0.5% rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.section-title {
+    background-color: #f8f8f8; /* Light background for contrast */
+    color: #333; /* Darker text for better readability */
+    padding: 1% 2%; /* Conversion des 15px en % */
+    cursor: pointer;
+    font-size: 1.6vw; /* Ajusté pour mieux correspondre à la taille de l'écran */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border: 0.1% solid #000000; /* Bottom border for emphasis */
+}
+
+.section-title:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+    color: #acb2b9; /* Change text color on hover */
+}
+
+.section-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.5s;
+    background-color: #ffffff; /* White background for content */
+    padding: 0 5%; /* Conversion de 20px en % */
+}
+
+.section-content p {
+    margin: 2% 0; /* Conversion de 15px en % */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #555; /* Softer text color */
+}
+
+.open {
+    max-height: 50%; /* Augmenté pour s'adapter à la hauteur du conteneur */
+    padding: 2%; /* Ajusté pour l'expansion du contenu */
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(3%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(5%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    margin-top: 5vh;
+}
+
+.scroll-animation.fade-in {
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.scroll-animation.fade-in-up {
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.scroll-animation.slide-in-left {
+    animation: slideInLeft 2s ease-out forwards;
+}
+
+.scroll-animation.slide-in-right {
+    animation: slideInRight 2s ease-out forwards;
+}
+
+/* Application des animations aux sections */
+.feature, .numbers div, .vehicle-card, .contact-item, .text-section, .image-section {
+    opacity: 0;
+    transform: translateY(3%);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+@media (max-width: 768px) {
+    header {
+    flex-direction: column;
+    align-items: center;
+    padding: 4vh 4vw;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8); /* Donne plus de lisibilité */
+}
+
+header nav ul {
+    flex-direction: column;
+    gap: 2vh;
+    margin-top: 2vh;
+}
+
+header nav ul li a {
+    font-size: 6vw; /* Taille responsive */
+}
+
+    .svglogo {
+        width: 20vw;
+        position: static;
+        margin-bottom: 2vh;
+    }
+
+    h1, .text-section h1 {
+        font-size: 6vw;
+        text-align: center;
+        padding: 10vh 5vw 2vh;
+    }
+
+    .hero {
+        height: auto;
+        flex-direction: column;
+        padding: 10vh 5vw;
+        text-align: center;
+    }
+
+    .features-container {
+        flex-direction: column;
+        gap: 5vh;
+    }
+
+    .feature {
+        width: 80%;
+        padding: 5vw;
+    }
+
+    .numbers {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .numbers div::after {
+        width: 50vw;
+    }
+
+    .vehicle-card {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .vehicle-image,
+    .vehicle-info {
+        width: 100%;
+        padding: 5vw;
+    }
+
+    .vehicle-info h2 {
+        font-size: 5vw;
+    }
+
+    .vehicle-info p {
+        font-size: 3.5vw;
+    }
+
+    .price {
+        font-size: 6vw;
+    }
+
+    .vidéo {
+        flex-direction: column;
+        padding: 5vh 3vw;
+    }
+
+    .text-section,
+    .image-section {
+        width: 100%;
+        padding: 5vh 4vw;
+    }
+
+    .text-section h1,
+    .text-section p {
+        font-size: 4.5vw;
+    }
+
+    .contact-item {
+        width: 80%;
+        margin: 5% auto;
+    }
+
+    .footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .column {
+        margin: 2vh 0;
+        text-align: center;
+    }
+    .feature h3,
+.feature p,
+.numbers div,
+.vehicle-info p,
+.text-section p,
+.contact-item p {
+    font-size: 4.5vw !important;
+}
+
+.vehicle-info h2,
+.text-section h1,
+.contact-section h2,
+.contact-item h3 {
+    font-size: 5.5vw !important;
+}
+.section-title {
+    font-size: 5vw !important;
+    padding: 3vw 4vw;
+    text-align: center;
+}
+.section-content p {
+    font-size: 4.5vw !important;
+    padding: 2vw;
+}
+.svglogo {
+    width: 20vw;
+    height: auto;
+    margin-bottom: 2vh;
+    position: relative;
+}
+.section,
+.feature,
+.vehicle-card,
+.contact-item {
+    margin-bottom: 8vh;
+}
+
+
+}
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 7vw;
+    }
+    .contact-item .icon-phone,
+    .contact-item .icon-chat,
+    .contact-item .icon-mail {
+        font-size: 8vw;
+    }
+}
+/* Cacher le bouton burger sur grand écran */
+.menu-toggle {
+    display: none;
+    font-size: 8vw;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+    position: absolute;
+    top: 2vh;
+    right: 5%;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 3vh 0;
+        z-index: 999;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 2vh;
+        padding: 0;
+    }
+
+    nav ul li a {
+        font-size: 6vw;
+        color: white;
+    }
+
+    .svglogo {
+        display: none; /* cache le logo si tu veux simplifier sur mobile */
+    }
+}

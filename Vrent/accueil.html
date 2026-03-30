@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRent - Location de véhicule TPMR</title>
+    <link rel="stylesheet" href="accueil.css">
+    <link rel="shortcut icon" href="./image/logo.png">
+</head>
+<body>
+
+<!-- barre de navigation -->
+<header>
+  <section class="photo"></section>
+
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- bouton burger -->
+
+  <nav id="navbar">
+    <img src="./image/logo.png" alt="Company Logo" class="svglogo">
+    <ul>
+      <li><a href="#" id="vehicle-link">Véhicule</a></li>
+      <li><a href="#">Tarif</a></li>
+      <li><a href="#" id="contact-link">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- cors de la page -->
+<main>
+    <!-- cadre de présentation -->
+    <div class="hero"></div>
+    <div class="numbers">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+    <div class="features-container">
+        <div class="feature">
+            <h3>Spécificité </h3>
+            <p>Diesel 130 ch, 4,3 L/100 km, boîte auto, régulateur de vitesse et climatisation. Connecté avec CarPlay et Bluetooth. </p>
+        </div>
+        <div class="feature">
+            <h3>Adapté pour tous</h3>
+            <p>Une sélection variée de voitures alliant confort, sécurité et performance, adaptée à tous les besoins.</p>
+        </div>
+        <div class="feature">
+            <h3>Support</h3>
+            <p>Notre équipe est disponible du lundi au vendredi, de 8h à 18h, pour répondre à vos demandes dans les meilleurs délais.</p>
+        </div>
+    </div>
+    <!-- fin de cadre de présentation -->
+    
+    <!-- Vidéo de présentation du véhicule -->
+    <div class="video" id="video-section">
+        <div class="press" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 8vh;">
+            
+            <!-- Texte à gauche -->
+            <div class="text-section" style="flex: 1 1 45%; padding: 20px; box-sizing: border-box;">
+                <h1>Louez le Peugeot Rifter TPMR - Confort et Accessibilité pour Tous</h1>
+                <p>Découvrez le Peugeot Rifter 6 Modulis TPMR, un véhicule spécialement aménagé pour le transport de personnes à mobilité réduite. 
+                    Profitez d’un espace optimisé, d’un accès simplifié grâce à sa rampe, et d’un confort exceptionnel pour vos trajets.</p>
+            </div>
+            
+            <!-- Vidéo à droite -->
+            <div class="image-section" style="flex: 1 1 45%; display: flex; justify-content: center; padding: 20px; box-sizing: border-box;">
+                <iframe width="100%" height="365" src="https://www.youtube.com/embed/KSx_cb5EQbE?si=4gCn_TalbNogdSgD" title="YouTube video player" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fin de vidéo de présentation de véhicule  -->
+    
+    <!-- tarif du véhicule  -->
+    <div class="container">
+        <h1>Vehicule disponible</h1>
+        <div class="vehicle-card">
+            <div class="vehicle-image">
+                <img src="./image/VuEnsemble.jpg" alt="Ampera Helix GT">
+            </div>
+            <div class="vehicle-info">
+                <p>2024 &nbsp; | &nbsp; Bas-Rhin &nbsp; | &nbsp; </p>
+                <h2>Modulis 6 Peugeot Rifter TPMR</h2>
+                <h3> a partir de 150€/24H</h3>
+            </div>
+                
+            
+        </div>
+    </div> 
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('dimension')">Dimension</div>
+        <div class="section-content" id="dimension">
+            <p>Longueur: 4753 mm | Largeur: 2107 mm | Empattement: 2975 mm</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('capacite')">Capacité</div>
+        <div class="section-content" id="capacite">
+            <p>Nombre de personnes: 5 personnes + 1 fauteuil roulant | Nombre d’usagers à fauteuil roulant: 1</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('accessibilite')">Accessibilité</div>
+        <div class="section-content" id="accessibilite">
+            <p>Rampe: Rampe en aluminium ZeroEffort® assistée par un système à balancier nécessitant un effort moyen de seulement 3 kg.</p>
+            <p> Rabattable à l’horizontale afin de disposer d’un coffre plat lorsqu’il n’y a pas de fauteuil roulant à bord.</p>
+            <p>Latéral: Portes latérales coulissantes droite et gauche avec vitres descendantes</p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title" onclick="toggleSection('fauteuil')">Emplacement du fauteuil roulant</div>
+        <div class="section-content" id="fauteuil">
+            <p>Arrimage du fauteuil roulant par 4 sangles à enrouleurs dont 2 enrouleurs électriques avant, et 2 enrouleurs Slide and Click à l’arrière. 
+                Ceinture abdominale et épaulière 3 points pour le passager en fauteuil roulant.</p>
+            <p>Crochet d’arrimage avant positionné directement à l’arrière permettant une prise en main facile.</p>
+            <p>Espace fauteuil roulant: Longueur : 1280 à 1480 mm, Largeur : 825 mm, Hauteur : 1450 mm</p>
+        </div>
+    </div>
+    
+    <!-- section contact  -->
+    <section class="contact-section" id="contact-item">
+        <h2>CONTACTEZ-NOUS</h2>
+        <h3>Nous sommes disponibles du lundi au samedi de 8h à 18h.</h3>
+        
+        <div class="contact-container">
+            <!-- Contact par téléphone -->
+            <div class="contact-item">
+                <div class="icon-phone">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Par téléphone</h3>
+                <z>De préférence par sms au </z>
+                <h3>06 71 52 13 43</h3>
+                
+            </div>
+            
+            <!-- Contact par chat -->
+            <!-- <div class="contact-item">
+                <div class="icon-chat">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <h3>Questions</h3>
+                <p>Posez-nous toutes vos questions par mail  </p>
+            </div> -->
+            
+            <!-- Contact par mail -->
+            <div class="contact-item">
+                <div class="icon-mail">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Par mail</h3>
+                <p>Écrivez-nous sur l'adresse mail : <a href="patrice.grunewald1@gmail.com">patrice.grunewald1@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- fin de section contact -->
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="column"></div>
+            <div class="column">
+                <img src="./image/logo.png" alt="Company Logo" class="svglogo">
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</main>
+<!-- fin de cors de la page -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        window.scrollTo(0, 0); // Scroll to the top of the page on load
+    });
+    function toggleSection(id) {
+        const content = document.getElementById(id);
+        content.classList.toggle('open');
+    }
+    
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', function () {
+      navbar.classList.toggle('open');
+    });
+  });
+
+
+</script>
+</body>
+</html>
